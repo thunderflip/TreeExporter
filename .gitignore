@@ -1,0 +1,14 @@
+# Archives de distribution : à publier comme assets de release, pas dans le code source.
+TreeExporter-*.zip
+
+# Outils locaux de développement et de test.
+tools/
+tests/resultats.txt
+
+# Fichiers locaux et éditeurs.
+*.log
+*.tmp
+*.bak
+.vscode/
+.idea/
+
