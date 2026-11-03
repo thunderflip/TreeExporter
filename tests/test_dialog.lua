@@ -115,7 +115,7 @@ test('plug-in manager title uses the manifest version without a build suffix', f
     local section = infoProvider.sectionsForTopOfDialog({
         static_text = function(_, args) return args end,
     })[1]
-    eq(section.title, 'TreeExporter 1.0.43')
+    eq(section.title, 'TreeExporter 1.0.44')
     eq(require('Info').VERSION.build, nil)
 end)
 print(string.format('%d dialog/provider tests passed', passed))

@@ -470,7 +470,7 @@ end)
 test('host export context starts rendering once and reports the running version', function()
     local r = run {}
     eq(r.lifecycle.renderScopes, 1); eq(r.lifecycle.renderStarts, 1)
-    eq(r.writes, 2); eq(r.messageTitles[#r.messageTitles], 'TreeExporter 1.0.43')
+    eq(r.writes, 2); eq(r.messageTitles[#r.messageTitles], 'TreeExporter 1.0.44')
 end)
 test('reported cancellation case stops once instead of failing every missing photo', function()
     local sources, files = {}, {}

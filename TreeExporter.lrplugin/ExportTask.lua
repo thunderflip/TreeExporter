@@ -233,7 +233,7 @@ function Task.processRenderedPhotos(functionContext, exportContext)
         end
     end
     if session:countRenditions() ~= plan.missing then
-        LrDialogs.message(pluginTitle, 'La liste de rendu ne correspond pas aux seuls fichiers manquants. L'export a été arrêté avant le rendu.', 'critical')
+        LrDialogs.message(pluginTitle, "La liste de rendu ne correspond pas aux seuls fichiers manquants. L'export a été arrêté avant le rendu.", 'critical')
         return
     end
     local exported, skipped = 0, plan.existing
@@ -280,7 +280,7 @@ function Task.processRenderedPhotos(functionContext, exportContext)
             if not isCanceled() and not rendition.wasSkipped then
                 local item = byPhoto[rendition.photo.localIdentifier or rendition.photo]
                 if not item then
-                    failure(rendition, 'Lightroom a renvoyé une image absente du plan d'export.')
+                    failure(rendition, "Lightroom a renvoyé une image absente du plan d'export.")
                 else
                     renderProgress:setCaption(string.format('%d / %d exportés - %s',
                         exported, plan.missing, Path.leaf(item.target)))
@@ -290,7 +290,7 @@ function Task.processRenderedPhotos(functionContext, exportContext)
                     if isCanceled() then
                     elseif not ok then
                         if renderWasCanceled(rendered) then
-                            failure(rendition, item.target .. '\nLightroom a annulé le rendu ; l'export a été interrompu.')
+                            failure(rendition, item.target .. "\nLightroom a annulé le rendu ; l'export a été interrompu.")
                             cancelExport()
                         else
                             failure(rendition, item.target .. '\n' .. tostring(rendered))

@@ -9,7 +9,7 @@ function Planner.fileName(record, settings)
     local extension = settings.extension
     if settings.format == 'ORIGINAL' then extension = originalExtension end
     if not extension or extension == '' then
-        return nil, 'Impossible de déterminer l'extension du format choisi.'
+        return nil, "Impossible de déterminer l'extension du format choisi."
     end
     if record.isVirtualCopy then
         local copyName = Path.safeCopyName(record.copyName)

@@ -8,5 +8,5 @@ return {
         title = 'TreeExporter',
         file = 'ExportServiceProvider.lua',
     },
-    VERSION = { major = 1, minor = 0, revision = 43 },
+    VERSION = { major = 1, minor = 0, revision = 44 },
 }

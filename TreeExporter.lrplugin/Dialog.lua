@@ -49,7 +49,7 @@ end
 local function refresh(pt, state)
     if not state.active then return end
     state.generation = state.generation + 1
-    pt.treeScan = 'La vérification complète sera faite avant tout calcul d'image.'
+    pt.treeScan = "La vérification complète sera faite avant tout calcul d'image."
     pt.treeReady = false
     local err
     if not state.records then
